@@ -23,6 +23,18 @@
                                 <color key="textColor" red="0.0" green="0.78289473684210531" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your email address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LI7-YQ-3j5">
+                                <rect key="frame" x="20" y="51" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwW-ZB-7MV">
+                                <rect key="frame" x="137" y="130" width="91" height="30"/>
+                                <state key="normal" title="Press Me"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CatClipArt.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hq4-iS-eWV">
+                                <rect key="frame" x="62" y="459" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -33,4 +45,7 @@
             <point key="canvasLocation" x="343.5" y="357.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CatClipArt.png" width="500" height="582"/>
+    </resources>
 </document>

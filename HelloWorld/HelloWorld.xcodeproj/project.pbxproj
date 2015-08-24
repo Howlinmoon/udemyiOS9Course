@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		960430631B8A984B0074FF2C /* CatClipArt.png in Resources */ = {isa = PBXBuildFile; fileRef = 960430621B8A984B0074FF2C /* CatClipArt.png */; };
 		9689E09A1B878E04005B9760 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9689E0991B878E04005B9760 /* AppDelegate.swift */; };
 		9689E09C1B878E04005B9760 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9689E09B1B878E04005B9760 /* ViewController.swift */; };
 		9689E09F1B878E04005B9760 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9689E09D1B878E04005B9760 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		960430621B8A984B0074FF2C /* CatClipArt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CatClipArt.png; path = ../../../../Downloads/CatClipArt.png; sourceTree = "<group>"; };
 		9689E0961B878E04005B9760 /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9689E0991B878E04005B9760 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9689E09B1B878E04005B9760 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				9689E0991B878E04005B9760 /* AppDelegate.swift */,
 				9689E09B1B878E04005B9760 /* ViewController.swift */,
+				960430621B8A984B0074FF2C /* CatClipArt.png */,
 				9689E09D1B878E04005B9760 /* Main.storyboard */,
 				9689E0A01B878E04005B9760 /* Assets.xcassets */,
 				9689E0A21B878E04005B9760 /* LaunchScreen.storyboard */,
@@ -121,6 +124,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				960430631B8A984B0074FF2C /* CatClipArt.png in Resources */,
 				9689E0A41B878E04005B9760 /* LaunchScreen.storyboard in Resources */,
 				9689E0A11B878E04005B9760 /* Assets.xcassets in Resources */,
 				9689E09F1B878E04005B9760 /* Main.storyboard in Resources */,
@@ -283,6 +287,7 @@
 				9689E0AA1B878E04005B9760 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
