@@ -35,4 +35,23 @@ newArray.append(newArray[0] * newArray[1])
 var dictionary = ["computer": "what I am programming", "coffee": "nasty drink"]
 print(dictionary["coffee"]!)
 
+print(dictionary.count)
+
+dictionary["pen"] = "Old fashioned writing implement"
+
+dictionary.removeValueForKey("coffee")
+
+print(dictionary)
+
+
+
+var menu = ["Hamburger": 5.00, "French Fries": 2.00, "Shake": 3.00]
+
+var totalCost = menu["Hamburger"]! + menu["French Fries"]! + menu["Shake"]!
+
+print("The total cost of the meal at FatBurger is: \(totalCost)")
+
+
+
+
 
