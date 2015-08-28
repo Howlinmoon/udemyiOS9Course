@@ -26,8 +26,17 @@ for x in arr {
 }
 
 for (index, value) in arr.enumerate() {
-    print("index = \(index), value = \(value)")
     arr[index]+=10
-    print("index = \(index), value = \(value)")
-    
+}
+
+for (index, value) in arr.enumerate() {
+    print(value)
+}
+
+
+var targetArray = [ 100.0, 25.0, 32.0, 17.0, 110.0, 93.0]
+
+for (index, value) in targetArray.enumerate() {
+    var halfValue = value / 2
+    print("half of value \(value) at index \(index) is \(halfValue)")
 }
