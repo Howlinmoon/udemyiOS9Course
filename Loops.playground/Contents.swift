@@ -40,3 +40,47 @@ for (index, value) in targetArray.enumerate() {
     var halfValue = value / 2
     print("half of value \(value) at index \(index) is \(halfValue)")
 }
+
+
+
+// While Loops
+
+var i = 1
+
+while i < 10 {
+    
+    print("i is \(i)")
+    i++
+}
+
+
+var counter = 1
+
+while counter < 11 {
+    
+    print("\(counter) x 5 = \(counter * 5)")
+    
+    counter++
+}
+
+
+var anotherArray = [0, 1, 2, 3, 4, 5, 6, 7]
+
+counter = 0
+
+while counter < anotherArray.count {
+    
+    print(anotherArray[counter])
+    
+    counter++
+}
+
+var lastArray = [ 10, 15, 25, 73, 100, 91, 27]
+counter = 0
+while counter < lastArray.count {
+    
+    var subtracted = lastArray[counter] - 1
+    print("original value at counter \(counter) is \(lastArray[counter]) less 1 is \(subtracted)")
+    counter++
+}
+
