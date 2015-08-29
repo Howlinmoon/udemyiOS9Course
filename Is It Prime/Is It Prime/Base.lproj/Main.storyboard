@@ -45,8 +45,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBg-lR-rkb">
-                                <rect key="frame" x="252" y="260" width="106" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBg-lR-rkb">
+                                <rect key="frame" x="247" y="260" width="106" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="106" id="70O-vq-vrg"/>
                                     <constraint firstAttribute="height" constant="44" id="Ydy-V6-ofl"/>
