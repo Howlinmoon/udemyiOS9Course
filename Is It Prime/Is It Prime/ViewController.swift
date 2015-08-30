@@ -16,29 +16,35 @@ class ViewController: UIViewController {
     
     @IBAction func isitPrime(sender: AnyObject) {
         
-        let number = Int(numberTextField.text!)!
+        // Handle bad input
+        if let number = Int(numberTextField.text!) {
         
-        var isPrime = true
+            var isPrime = true
         
-        if number == 1 {
-            isPrime = true
-        } else if number == 2 {
-            isPrime = false
-        } else if number > 2 {
+            if number == 1 {
+                isPrime = true
+            } else if number == 2 {
+                isPrime = false
+            } else if number > 2 {
             
-            for var i = 2; i < number; i++ {
+                for var i = 2; i < number; i++ {
                 
-                if number % i == 0 {
-                    print("This number is NOT a prime - \(i) is a factor")
-                    isPrime = false
+                    if number % i == 0 {
+                        print("This number is NOT a prime - \(i) is a factor")
+                        isPrime = false
+                    }
                 }
             }
+            if isPrime {
+                resultsLabel.text = "YES, \(number) is PRIME!"
+            } else {
+                resultsLabel.text = "No, \(number) is not prime"
+            }
+        } else {
+            resultsLabel.text = "Invalid input"
         }
-        print(isPrime)
-        
-    }
    
-    
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
