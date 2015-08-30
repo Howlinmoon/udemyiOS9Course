@@ -10,9 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // globals
+    var time = 0
+    
+    
+    func result() {
+        time++
+        print("\(time) seconds has passed")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // timer code goes in here
+        
+        var timer = NSTimer()
+        // self here is referring to the ViewController object itself
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("result"), userInfo: nil, repeats: true)
+        
     }
 
     override func didReceiveMemoryWarning() {
