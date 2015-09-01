@@ -12,7 +12,26 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // saving user specified settings
+        NSUserDefaults.standardUserDefaults().setObject("Biff", forKey: "name")
+        
+        // retrieve the user name  NSString or String?
+        let userName = NSUserDefaults.standardUserDefaults().objectForKey("name")! as! NSString
+        
+        print("userName is: \(userName)")
+        
+        let array = [1, 2, 3, 4]
+        NSUserDefaults.standardUserDefaults().setObject(array, forKey: "array")
+        // retrieve the array
+        let newArray = NSUserDefaults.standardUserDefaults().objectForKey("array")! as! NSArray
+        print(newArray)
+        
+        // Try looping through the returned array
+        for x in newArray {
+            print(x)
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
