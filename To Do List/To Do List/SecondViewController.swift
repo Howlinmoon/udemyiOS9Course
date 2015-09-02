@@ -10,6 +10,19 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet var item: UITextField!
+
+    @IBAction func addItem(sender: AnyObject) {
+        // add an item to the todo array
+        toDoList.append(item.text!)
+        // clear out the input text, to allow for another
+        item.text = ""
+        
+        
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +33,16 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    // get rid of keyboard if user touches outside of it
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        item.resignFirstResponder()
+        return true
+    }
+    
 
 }
 
