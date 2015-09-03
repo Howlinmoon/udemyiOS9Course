@@ -19,7 +19,13 @@ class FirstViewController: UIViewController, UITableViewDelegate {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // if the saved array exists - restore it
+        if (NSUserDefaults.standardUserDefaults().objectForKey("toDoList") != nil) {
+            toDoList = NSUserDefaults.standardUserDefaults().objectForKey("toDoList") as! [String]
+        }
+    
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,6 +46,25 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         
         return cell
     }
+    
+    
+    // add table editing (deleting) capability
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        print("You are trying to edit something in the table")
+        
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            print("You are trying to delete something")
+            // remove from the array
+            toDoList.removeAtIndex(indexPath.row)
+            // update saved storage
+            NSUserDefaults.standardUserDefaults().setObject(toDoList, forKey: "toDoList")
+            // update the table
+            toDoListTable.reloadData()
+        }
+        
+    
+    }
+    
     
     // This handy function causes the table to be reloaded when we return from the second
     // view controller

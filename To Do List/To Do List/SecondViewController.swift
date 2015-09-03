@@ -18,6 +18,8 @@ class SecondViewController: UIViewController {
         // clear out the input text, to allow for another
         item.text = ""
         
+        // update the stored copy of the array
+        NSUserDefaults.standardUserDefaults().setObject(toDoList, forKey: "toDoList")
         
         
     }
