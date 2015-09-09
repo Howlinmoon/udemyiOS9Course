@@ -20,6 +20,12 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
+	<key>NSLocationWHenInUseUsageDescription</key>
+	<string>Yo Dude, can I use your location?</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Dude, I need to be able to stalk you</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>

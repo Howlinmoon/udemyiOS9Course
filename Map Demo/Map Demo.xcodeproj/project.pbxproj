@@ -12,6 +12,7 @@
 		963150BD1B9F400200A47152 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 963150BB1B9F400200A47152 /* Main.storyboard */; };
 		963150BF1B9F400200A47152 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 963150BE1B9F400200A47152 /* Assets.xcassets */; };
 		963150C21B9F400200A47152 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 963150C01B9F400200A47152 /* LaunchScreen.storyboard */; };
+		96A0511F1BA044F3005F82EC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A0511E1BA044F3005F82EC /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		963150BE1B9F400200A47152 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		963150C11B9F400200A47152 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		963150C31B9F400200A47152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96A0511E1BA044F3005F82EC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96A0511F1BA044F3005F82EC /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +41,7 @@
 		963150AB1B9F400200A47152 = {
 			isa = PBXGroup;
 			children = (
+				96A0511E1BA044F3005F82EC /* CoreLocation.framework */,
 				963150B61B9F400200A47152 /* Map Demo */,
 				963150B51B9F400200A47152 /* Products */,
 			);
@@ -283,6 +287,7 @@
 				963150C81B9F400200A47152 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
