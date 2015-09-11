@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vww-tp-rjA">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Map View Controller-->
@@ -15,8 +16,22 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CpL-QK-gzl">
+                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CpL-QK-gzl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="2JI-MT-Kk4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CpL-QK-gzl" secondAttribute="bottom" id="kjn-or-faU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CpL-QK-gzl" secondAttribute="trailing" constant="-20" id="re7-A2-wnj"/>
+                            <constraint firstItem="CpL-QK-gzl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="x8W-qF-ybc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="map" destination="CpL-QK-gzl" id="u7t-25-Elc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -25,13 +40,13 @@
         <!--Root View Controller-->
         <scene sceneID="vzO-iY-sRi">
             <objects>
-                <tableViewController title="Root View Controller" id="rbd-oH-JMq" sceneMemberID="viewController">
+                <tableViewController title="Root View Controller" id="rbd-oH-JMq" customClass="TableViewController" customModule="Memorable_Places" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="naU-N7-SY2">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ggr-Np-TrO">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Ggr-Np-TrO">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ggr-Np-TrO" id="JAj-6V-ujA">
@@ -47,7 +62,7 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Root View Controller" id="Qzt-TI-6l6">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="rWf-f1-plv">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="rWf-f1-plv">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="show" id="bxa-dD-HJS"/>
                             </connections>
