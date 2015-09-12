@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
 
@@ -67,6 +68,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 if title == "" {
                     title = "Added \(NSDate())"
                 }
+                
+            places.append(["name":title, "lat":"\(newCoordinate.latitude)", "lon":"\(newCoordinate.longitude)"])
 
                 let annotation = MKPointAnnotation()
                 annotation.coordinate = newCoordinate
