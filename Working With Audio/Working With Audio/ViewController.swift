@@ -17,7 +17,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let audioPath = NSBundle.mainBundle().pathForResource("bach", ofType: "mp3")!
-        
+        do {
+            
+            try player = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: audioPath))
+            player.play()
+        } catch {
+            // process error here if any
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {
