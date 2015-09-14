@@ -11,10 +11,11 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
-    var player:AVAudioPlayer = AVAudioPlayer()
+    var paused = false
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var slider: UISlider!
+    
+    @IBAction func play(sender: AnyObject) {
         
         let audioPath = NSBundle.mainBundle().pathForResource("bach", ofType: "mp3")!
         do {
@@ -25,6 +26,33 @@ class ViewController: UIViewController {
             // process error here if any
             
         }
+
+    }
+    
+    @IBAction func pause(sender: AnyObject) {
+        
+        if paused == false {
+            player.pause()
+            paused = true
+        } else {
+            player.play()
+            paused = false
+        }
+    
+    }
+    
+    @IBAction func adjustVolume(sender: AnyObject) {
+    
+        player.volume = slider.value
+        
+    }
+    
+    
+    var player:AVAudioPlayer = AVAudioPlayer()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
     }
 
     override func didReceiveMemoryWarning() {
