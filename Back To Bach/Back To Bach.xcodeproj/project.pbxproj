@@ -12,6 +12,8 @@
 		9667356E1BA72928009FA783 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9667356C1BA72928009FA783 /* Main.storyboard */; };
 		966735701BA72928009FA783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9667356F1BA72928009FA783 /* Assets.xcassets */; };
 		966735731BA72928009FA783 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 966735711BA72928009FA783 /* LaunchScreen.storyboard */; };
+		9667357B1BA7299E009FA783 /* bach.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9667357A1BA7299E009FA783 /* bach.mp3 */; settings = {ASSET_TAGS = (); }; };
+		9667357D1BA72B42009FA783 /* bach.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9667357C1BA72B42009FA783 /* bach.jpg */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		9667356F1BA72928009FA783 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		966735721BA72928009FA783 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		966735741BA72928009FA783 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9667357A1BA7299E009FA783 /* bach.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bach.mp3; sourceTree = "<group>"; };
+		9667357C1BA72B42009FA783 /* bach.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bach.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 				966735681BA72928009FA783 /* AppDelegate.swift */,
 				9667356A1BA72928009FA783 /* ViewController.swift */,
 				9667356C1BA72928009FA783 /* Main.storyboard */,
+				9667357C1BA72B42009FA783 /* bach.jpg */,
+				9667357A1BA7299E009FA783 /* bach.mp3 */,
 				9667356F1BA72928009FA783 /* Assets.xcassets */,
 				966735711BA72928009FA783 /* LaunchScreen.storyboard */,
 				966735741BA72928009FA783 /* Info.plist */,
@@ -121,6 +127,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9667357B1BA7299E009FA783 /* bach.mp3 in Resources */,
+				9667357D1BA72B42009FA783 /* bach.jpg in Resources */,
 				966735731BA72928009FA783 /* LaunchScreen.storyboard in Resources */,
 				966735701BA72928009FA783 /* Assets.xcassets in Resources */,
 				9667356E1BA72928009FA783 /* Main.storyboard in Resources */,
