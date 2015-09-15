@@ -1,0 +1,334 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		96BCA28E1BA87C5000F49906 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BCA28D1BA87C5000F49906 /* AppDelegate.swift */; };
+		96BCA2901BA87C5000F49906 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BCA28F1BA87C5000F49906 /* ViewController.swift */; };
+		96BCA2931BA87C5000F49906 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96BCA2911BA87C5000F49906 /* Main.storyboard */; };
+		96BCA2951BA87C5000F49906 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96BCA2941BA87C5000F49906 /* Assets.xcassets */; };
+		96BCA2981BA87C5000F49906 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96BCA2961BA87C5000F49906 /* LaunchScreen.storyboard */; };
+		96BCA2A91BA87CAA00F49906 /* Boinging.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 96BCA2A01BA87CAA00F49906 /* Boinging.mp3 */; settings = {ASSET_TAGS = (); }; };
+		96BCA2AA1BA87CAA00F49906 /* Canary.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 96BCA2A11BA87CAA00F49906 /* Canary.mp3 */; settings = {ASSET_TAGS = (); }; };
+		96BCA2AB1BA87CAA00F49906 /* Cartoon_Airplane.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 96BCA2A21BA87CAA00F49906 /* Cartoon_Airplane.mp3 */; settings = {ASSET_TAGS = (); }; };
+		96BCA2AC1BA87CAA00F49906 /* Dum_Dum.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 96BCA2A31BA87CAA00F49906 /* Dum_Dum.mp3 */; settings = {ASSET_TAGS = (); }; };
+		96BCA2AD1BA87CAA00F49906 /* Falling_Bomb.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 96BCA2A41BA87CAA00F49906 /* Falling_Bomb.mp3 */; settings = {ASSET_TAGS = (); }; };
+		96BCA2AE1BA87CAA00F49906 /* Junk_Falling.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 96BCA2A51BA87CAA00F49906 /* Junk_Falling.mp3 */; settings = {ASSET_TAGS = (); }; };
+		96BCA2AF1BA87CAA00F49906 /* Missile_Launch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 96BCA2A61BA87CAA00F49906 /* Missile_Launch.mp3 */; settings = {ASSET_TAGS = (); }; };
+		96BCA2B01BA87CAA00F49906 /* Mouse_Twitter.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 96BCA2A71BA87CAA00F49906 /* Mouse_Twitter.mp3 */; settings = {ASSET_TAGS = (); }; };
+		96BCA2B11BA87CAA00F49906 /* Slide_Whistle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 96BCA2A81BA87CAA00F49906 /* Slide_Whistle.mp3 */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		96BCA28A1BA87C5000F49906 /* Random Noises.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Random Noises.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96BCA28D1BA87C5000F49906 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		96BCA28F1BA87C5000F49906 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		96BCA2921BA87C5000F49906 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		96BCA2941BA87C5000F49906 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		96BCA2971BA87C5000F49906 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		96BCA2991BA87C5000F49906 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96BCA2A01BA87CAA00F49906 /* Boinging.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Boinging.mp3; sourceTree = "<group>"; };
+		96BCA2A11BA87CAA00F49906 /* Canary.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Canary.mp3; sourceTree = "<group>"; };
+		96BCA2A21BA87CAA00F49906 /* Cartoon_Airplane.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Cartoon_Airplane.mp3; sourceTree = "<group>"; };
+		96BCA2A31BA87CAA00F49906 /* Dum_Dum.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Dum_Dum.mp3; sourceTree = "<group>"; };
+		96BCA2A41BA87CAA00F49906 /* Falling_Bomb.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Falling_Bomb.mp3; sourceTree = "<group>"; };
+		96BCA2A51BA87CAA00F49906 /* Junk_Falling.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Junk_Falling.mp3; sourceTree = "<group>"; };
+		96BCA2A61BA87CAA00F49906 /* Missile_Launch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Missile_Launch.mp3; sourceTree = "<group>"; };
+		96BCA2A71BA87CAA00F49906 /* Mouse_Twitter.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mouse_Twitter.mp3; sourceTree = "<group>"; };
+		96BCA2A81BA87CAA00F49906 /* Slide_Whistle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Slide_Whistle.mp3; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96BCA2871BA87C5000F49906 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96BCA2811BA87C5000F49906 = {
+			isa = PBXGroup;
+			children = (
+				96BCA28C1BA87C5000F49906 /* Random Noises */,
+				96BCA28B1BA87C5000F49906 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		96BCA28B1BA87C5000F49906 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96BCA28A1BA87C5000F49906 /* Random Noises.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96BCA28C1BA87C5000F49906 /* Random Noises */ = {
+			isa = PBXGroup;
+			children = (
+				96BCA28D1BA87C5000F49906 /* AppDelegate.swift */,
+				96BCA28F1BA87C5000F49906 /* ViewController.swift */,
+				96BCA2911BA87C5000F49906 /* Main.storyboard */,
+				96BCA29F1BA87CAA00F49906 /* sfx */,
+				96BCA2941BA87C5000F49906 /* Assets.xcassets */,
+				96BCA2961BA87C5000F49906 /* LaunchScreen.storyboard */,
+				96BCA2991BA87C5000F49906 /* Info.plist */,
+			);
+			path = "Random Noises";
+			sourceTree = "<group>";
+		};
+		96BCA29F1BA87CAA00F49906 /* sfx */ = {
+			isa = PBXGroup;
+			children = (
+				96BCA2A01BA87CAA00F49906 /* Boinging.mp3 */,
+				96BCA2A11BA87CAA00F49906 /* Canary.mp3 */,
+				96BCA2A21BA87CAA00F49906 /* Cartoon_Airplane.mp3 */,
+				96BCA2A31BA87CAA00F49906 /* Dum_Dum.mp3 */,
+				96BCA2A41BA87CAA00F49906 /* Falling_Bomb.mp3 */,
+				96BCA2A51BA87CAA00F49906 /* Junk_Falling.mp3 */,
+				96BCA2A61BA87CAA00F49906 /* Missile_Launch.mp3 */,
+				96BCA2A71BA87CAA00F49906 /* Mouse_Twitter.mp3 */,
+				96BCA2A81BA87CAA00F49906 /* Slide_Whistle.mp3 */,
+			);
+			path = sfx;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		96BCA2891BA87C5000F49906 /* Random Noises */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96BCA29C1BA87C5000F49906 /* Build configuration list for PBXNativeTarget "Random Noises" */;
+			buildPhases = (
+				96BCA2861BA87C5000F49906 /* Sources */,
+				96BCA2871BA87C5000F49906 /* Frameworks */,
+				96BCA2881BA87C5000F49906 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Random Noises";
+			productName = "Random Noises";
+			productReference = 96BCA28A1BA87C5000F49906 /* Random Noises.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96BCA2821BA87C5000F49906 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Jim Veneskey";
+				TargetAttributes = {
+					96BCA2891BA87C5000F49906 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = 96BCA2851BA87C5000F49906 /* Build configuration list for PBXProject "Random Noises" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 96BCA2811BA87C5000F49906;
+			productRefGroup = 96BCA28B1BA87C5000F49906 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96BCA2891BA87C5000F49906 /* Random Noises */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96BCA2881BA87C5000F49906 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96BCA2981BA87C5000F49906 /* LaunchScreen.storyboard in Resources */,
+				96BCA2AB1BA87CAA00F49906 /* Cartoon_Airplane.mp3 in Resources */,
+				96BCA2B01BA87CAA00F49906 /* Mouse_Twitter.mp3 in Resources */,
+				96BCA2AE1BA87CAA00F49906 /* Junk_Falling.mp3 in Resources */,
+				96BCA2AD1BA87CAA00F49906 /* Falling_Bomb.mp3 in Resources */,
+				96BCA2AF1BA87CAA00F49906 /* Missile_Launch.mp3 in Resources */,
+				96BCA2951BA87C5000F49906 /* Assets.xcassets in Resources */,
+				96BCA2B11BA87CAA00F49906 /* Slide_Whistle.mp3 in Resources */,
+				96BCA2AA1BA87CAA00F49906 /* Canary.mp3 in Resources */,
+				96BCA2AC1BA87CAA00F49906 /* Dum_Dum.mp3 in Resources */,
+				96BCA2931BA87C5000F49906 /* Main.storyboard in Resources */,
+				96BCA2A91BA87CAA00F49906 /* Boinging.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96BCA2861BA87C5000F49906 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96BCA2901BA87C5000F49906 /* ViewController.swift in Sources */,
+				96BCA28E1BA87C5000F49906 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		96BCA2911BA87C5000F49906 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96BCA2921BA87C5000F49906 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		96BCA2961BA87C5000F49906 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96BCA2971BA87C5000F49906 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		96BCA29A1BA87C5000F49906 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		96BCA29B1BA87C5000F49906 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		96BCA29D1BA87C5000F49906 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Random Noises/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.strifecrafter.Random-Noises";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		96BCA29E1BA87C5000F49906 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Random Noises/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.strifecrafter.Random-Noises";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96BCA2851BA87C5000F49906 /* Build configuration list for PBXProject "Random Noises" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96BCA29A1BA87C5000F49906 /* Debug */,
+				96BCA29B1BA87C5000F49906 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96BCA29C1BA87C5000F49906 /* Build configuration list for PBXNativeTarget "Random Noises" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96BCA29D1BA87C5000F49906 /* Debug */,
+				96BCA29E1BA87C5000F49906 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 96BCA2821BA87C5000F49906 /* Project object */;
+}
