@@ -19,10 +19,11 @@ class ViewController: UIViewController {
         let context:NSManagedObjectContext = appDel.managedObjectContext
         
         /*
+        
         var newUser = NSEntityDescription.insertNewObjectForEntityForName("Users", inManagedObjectContext: context)
         
-        newUser.setValue("Jim", forKey: "username")
-        newUser.setValue("pass123", forKey: "password")
+        newUser.setValue("Klondike", forKey: "username")
+        newUser.setValue("Yummy678", forKey: "password")
         
         do {
             try context.save()
@@ -30,11 +31,12 @@ class ViewController: UIViewController {
             // any errors are caught here
             print("Something went wrong attempting to save the context")
         }
-        
         */
 
         // double check our saved data
         let request = NSFetchRequest(entityName: "Users")
+        // search the database for username 'Jim'
+        //request.predicate = NSPredicate(format: "username = %@", "Klondike")
         request.returnsObjectsAsFaults = false
         
         do {
@@ -44,9 +46,32 @@ class ViewController: UIViewController {
                 
                 for result in results as! [NSManagedObject] {
                     
-                    print(result.valueForKey("username")!)
-                    print(result.valueForKey("password")!)
+                    /*
+                    
+                    // Try changing the targeted username to something else
+                    //result.setValue("Belkar", forKey: "username")
+                    
+                    // Try deleting the current record
+                    context.deleteObject(result)
+                    
+                    // Save the context
+                    do {
+                        try context.save()
+                    } catch {
+                        print("Encountered an error saving the updated context")
+                    }
+                    
+                    */
+
+                    if let username = result.valueForKey("username") as? String {
+                        print("The username is \(username)")
+                    }
+                    
+//                    print(result.valueForKey("username")!)
+//                    print(result.valueForKey("password")!)
                 }
+            } else {
+                print("Unable to retrieve any records")
             }
         } catch {
             // any errors are caught here
