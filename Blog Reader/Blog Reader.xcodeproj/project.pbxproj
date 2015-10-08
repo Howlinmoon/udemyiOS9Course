@@ -7,29 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		961A84B71BAC402A00B230F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961A84B61BAC402A00B230F0 /* AppDelegate.swift */; };
-		961A84BA1BAC402A00B230F0 /* Blog_Reader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 961A84B81BAC402A00B230F0 /* Blog_Reader.xcdatamodeld */; };
-		961A84BC1BAC402A00B230F0 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961A84BB1BAC402A00B230F0 /* MasterViewController.swift */; };
-		961A84BE1BAC402A00B230F0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961A84BD1BAC402A00B230F0 /* DetailViewController.swift */; };
-		961A84C11BAC402A00B230F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 961A84BF1BAC402A00B230F0 /* Main.storyboard */; };
-		961A84C31BAC402A00B230F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 961A84C21BAC402A00B230F0 /* Assets.xcassets */; };
-		961A84C61BAC402A00B230F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 961A84C41BAC402A00B230F0 /* LaunchScreen.storyboard */; };
+		96AF90F21BC67C410093F40D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AF90F11BC67C410093F40D /* AppDelegate.swift */; };
+		96AF90F51BC67C410093F40D /* Blog_Reader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 96AF90F31BC67C410093F40D /* Blog_Reader.xcdatamodeld */; };
+		96AF90F71BC67C410093F40D /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AF90F61BC67C410093F40D /* MasterViewController.swift */; };
+		96AF90F91BC67C410093F40D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AF90F81BC67C410093F40D /* DetailViewController.swift */; };
+		96AF90FC1BC67C410093F40D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96AF90FA1BC67C410093F40D /* Main.storyboard */; };
+		96AF90FE1BC67C410093F40D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96AF90FD1BC67C410093F40D /* Assets.xcassets */; };
+		96AF91011BC67C410093F40D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96AF90FF1BC67C410093F40D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		961A84B31BAC402A00B230F0 /* Blog Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blog Reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		961A84B61BAC402A00B230F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		961A84B91BAC402A00B230F0 /* Blog_Reader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Blog_Reader.xcdatamodel; sourceTree = "<group>"; };
-		961A84BB1BAC402A00B230F0 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		961A84BD1BAC402A00B230F0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		961A84C01BAC402A00B230F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		961A84C21BAC402A00B230F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		961A84C51BAC402A00B230F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		961A84C71BAC402A00B230F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96AF90EE1BC67C410093F40D /* Blog Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blog Reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96AF90F11BC67C410093F40D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		96AF90F41BC67C410093F40D /* Blog_Reader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Blog_Reader.xcdatamodel; sourceTree = "<group>"; };
+		96AF90F61BC67C410093F40D /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		96AF90F81BC67C410093F40D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		96AF90FB1BC67C410093F40D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		96AF90FD1BC67C410093F40D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		96AF91001BC67C410093F40D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		96AF91021BC67C410093F40D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		961A84B01BAC402A00B230F0 /* Frameworks */ = {
+		96AF90EB1BC67C410093F40D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,33 +39,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		961A84AA1BAC402A00B230F0 = {
+		96AF90E51BC67C410093F40D = {
 			isa = PBXGroup;
 			children = (
-				961A84B51BAC402A00B230F0 /* Blog Reader */,
-				961A84B41BAC402A00B230F0 /* Products */,
+				96AF90F01BC67C410093F40D /* Blog Reader */,
+				96AF90EF1BC67C410093F40D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		961A84B41BAC402A00B230F0 /* Products */ = {
+		96AF90EF1BC67C410093F40D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				961A84B31BAC402A00B230F0 /* Blog Reader.app */,
+				96AF90EE1BC67C410093F40D /* Blog Reader.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		961A84B51BAC402A00B230F0 /* Blog Reader */ = {
+		96AF90F01BC67C410093F40D /* Blog Reader */ = {
 			isa = PBXGroup;
 			children = (
-				961A84B61BAC402A00B230F0 /* AppDelegate.swift */,
-				961A84BB1BAC402A00B230F0 /* MasterViewController.swift */,
-				961A84BD1BAC402A00B230F0 /* DetailViewController.swift */,
-				961A84BF1BAC402A00B230F0 /* Main.storyboard */,
-				961A84C21BAC402A00B230F0 /* Assets.xcassets */,
-				961A84C41BAC402A00B230F0 /* LaunchScreen.storyboard */,
-				961A84C71BAC402A00B230F0 /* Info.plist */,
-				961A84B81BAC402A00B230F0 /* Blog_Reader.xcdatamodeld */,
+				96AF90F11BC67C410093F40D /* AppDelegate.swift */,
+				96AF90F61BC67C410093F40D /* MasterViewController.swift */,
+				96AF90F81BC67C410093F40D /* DetailViewController.swift */,
+				96AF90FA1BC67C410093F40D /* Main.storyboard */,
+				96AF90FD1BC67C410093F40D /* Assets.xcassets */,
+				96AF90FF1BC67C410093F40D /* LaunchScreen.storyboard */,
+				96AF91021BC67C410093F40D /* Info.plist */,
+				96AF90F31BC67C410093F40D /* Blog_Reader.xcdatamodeld */,
 			);
 			path = "Blog Reader";
 			sourceTree = "<group>";
@@ -73,13 +73,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		961A84B21BAC402A00B230F0 /* Blog Reader */ = {
+		96AF90ED1BC67C410093F40D /* Blog Reader */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 961A84CA1BAC402A00B230F0 /* Build configuration list for PBXNativeTarget "Blog Reader" */;
+			buildConfigurationList = 96AF91051BC67C410093F40D /* Build configuration list for PBXNativeTarget "Blog Reader" */;
 			buildPhases = (
-				961A84AF1BAC402A00B230F0 /* Sources */,
-				961A84B01BAC402A00B230F0 /* Frameworks */,
-				961A84B11BAC402A00B230F0 /* Resources */,
+				96AF90EA1BC67C410093F40D /* Sources */,
+				96AF90EB1BC67C410093F40D /* Frameworks */,
+				96AF90EC1BC67C410093F40D /* Resources */,
 			);
 			buildRules = (
 			);
@@ -87,24 +87,24 @@
 			);
 			name = "Blog Reader";
 			productName = "Blog Reader";
-			productReference = 961A84B31BAC402A00B230F0 /* Blog Reader.app */;
+			productReference = 96AF90EE1BC67C410093F40D /* Blog Reader.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		961A84AB1BAC402A00B230F0 /* Project object */ = {
+		96AF90E61BC67C410093F40D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Jim Veneskey";
 				TargetAttributes = {
-					961A84B21BAC402A00B230F0 = {
-						CreatedOnToolsVersion = 7.0;
+					96AF90ED1BC67C410093F40D = {
+						CreatedOnToolsVersion = 7.0.1;
 					};
 				};
 			};
-			buildConfigurationList = 961A84AE1BAC402A00B230F0 /* Build configuration list for PBXProject "Blog Reader" */;
+			buildConfigurationList = 96AF90E91BC67C410093F40D /* Build configuration list for PBXProject "Blog Reader" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -112,56 +112,56 @@
 				en,
 				Base,
 			);
-			mainGroup = 961A84AA1BAC402A00B230F0;
-			productRefGroup = 961A84B41BAC402A00B230F0 /* Products */;
+			mainGroup = 96AF90E51BC67C410093F40D;
+			productRefGroup = 96AF90EF1BC67C410093F40D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				961A84B21BAC402A00B230F0 /* Blog Reader */,
+				96AF90ED1BC67C410093F40D /* Blog Reader */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		961A84B11BAC402A00B230F0 /* Resources */ = {
+		96AF90EC1BC67C410093F40D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				961A84C61BAC402A00B230F0 /* LaunchScreen.storyboard in Resources */,
-				961A84C31BAC402A00B230F0 /* Assets.xcassets in Resources */,
-				961A84C11BAC402A00B230F0 /* Main.storyboard in Resources */,
+				96AF91011BC67C410093F40D /* LaunchScreen.storyboard in Resources */,
+				96AF90FE1BC67C410093F40D /* Assets.xcassets in Resources */,
+				96AF90FC1BC67C410093F40D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		961A84AF1BAC402A00B230F0 /* Sources */ = {
+		96AF90EA1BC67C410093F40D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				961A84BA1BAC402A00B230F0 /* Blog_Reader.xcdatamodeld in Sources */,
-				961A84B71BAC402A00B230F0 /* AppDelegate.swift in Sources */,
-				961A84BC1BAC402A00B230F0 /* MasterViewController.swift in Sources */,
-				961A84BE1BAC402A00B230F0 /* DetailViewController.swift in Sources */,
+				96AF90F51BC67C410093F40D /* Blog_Reader.xcdatamodeld in Sources */,
+				96AF90F21BC67C410093F40D /* AppDelegate.swift in Sources */,
+				96AF90F71BC67C410093F40D /* MasterViewController.swift in Sources */,
+				96AF90F91BC67C410093F40D /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		961A84BF1BAC402A00B230F0 /* Main.storyboard */ = {
+		96AF90FA1BC67C410093F40D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				961A84C01BAC402A00B230F0 /* Base */,
+				96AF90FB1BC67C410093F40D /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		961A84C41BAC402A00B230F0 /* LaunchScreen.storyboard */ = {
+		96AF90FF1BC67C410093F40D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				961A84C51BAC402A00B230F0 /* Base */,
+				96AF91001BC67C410093F40D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -169,7 +169,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		961A84C81BAC402A00B230F0 /* Debug */ = {
+		96AF91031BC67C410093F40D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -213,7 +213,7 @@
 			};
 			name = Debug;
 		};
-		961A84C91BAC402A00B230F0 /* Release */ = {
+		96AF91041BC67C410093F40D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -250,24 +250,24 @@
 			};
 			name = Release;
 		};
-		961A84CB1BAC402A00B230F0 /* Debug */ = {
+		96AF91061BC67C410093F40D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Blog Reader/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bifftech.Blog-Reader";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.strifecrafter.Blog-Reader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		961A84CC1BAC402A00B230F0 /* Release */ = {
+		96AF91071BC67C410093F40D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Blog Reader/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bifftech.Blog-Reader";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.strifecrafter.Blog-Reader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -275,37 +275,37 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		961A84AE1BAC402A00B230F0 /* Build configuration list for PBXProject "Blog Reader" */ = {
+		96AF90E91BC67C410093F40D /* Build configuration list for PBXProject "Blog Reader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				961A84C81BAC402A00B230F0 /* Debug */,
-				961A84C91BAC402A00B230F0 /* Release */,
+				96AF91031BC67C410093F40D /* Debug */,
+				96AF91041BC67C410093F40D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		961A84CA1BAC402A00B230F0 /* Build configuration list for PBXNativeTarget "Blog Reader" */ = {
+		96AF91051BC67C410093F40D /* Build configuration list for PBXNativeTarget "Blog Reader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				961A84CB1BAC402A00B230F0 /* Debug */,
-				961A84CC1BAC402A00B230F0 /* Release */,
+				96AF91061BC67C410093F40D /* Debug */,
+				96AF91071BC67C410093F40D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		961A84B81BAC402A00B230F0 /* Blog_Reader.xcdatamodeld */ = {
+		96AF90F31BC67C410093F40D /* Blog_Reader.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				961A84B91BAC402A00B230F0 /* Blog_Reader.xcdatamodel */,
+				96AF90F41BC67C410093F40D /* Blog_Reader.xcdatamodel */,
 			);
-			currentVersion = 961A84B91BAC402A00B230F0 /* Blog_Reader.xcdatamodel */;
+			currentVersion = 96AF90F41BC67C410093F40D /* Blog_Reader.xcdatamodel */;
 			path = Blog_Reader.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 961A84AB1BAC402A00B230F0 /* Project object */;
+	rootObject = 96AF90E61BC67C410093F40D /* Project object */;
 }

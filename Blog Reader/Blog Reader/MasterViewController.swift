@@ -2,7 +2,7 @@
 //  MasterViewController.swift
 //  Blog Reader
 //
-//  Created by Jim Veneskey on 9/18/15.
+//  Created by jim Veneskey on 10/8/15.
 //  Copyright © 2015 Jim Veneskey. All rights reserved.
 //
 

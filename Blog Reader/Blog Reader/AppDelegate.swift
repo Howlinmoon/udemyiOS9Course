@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Blog Reader
 //
-//  Created by Jim Veneskey on 9/18/15.
+//  Created by jim Veneskey on 10/8/15.
 //  Copyright © 2015 Jim Veneskey. All rights reserved.
 //
 
@@ -66,7 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     // MARK: - Core Data stack
 
     lazy var applicationDocumentsDirectory: NSURL = {
-        // The directory the application uses to store the Core Data store file. This code uses a directory named "com.bifftech.Blog_Reader" in the application's documents Application Support directory.
+        // The directory the application uses to store the Core Data store file. This code uses a directory named "com.strifecrafter.Blog_Reader" in the application's documents Application Support directory.
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
         return urls[urls.count-1]
     }()
