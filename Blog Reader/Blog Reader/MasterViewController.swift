@@ -17,6 +17,82 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context: NSManagedObjectContext = appDel.managedObjectContext
+        
+        let url = NSURL(string: "https://www.googleapis.com/blogger/v3/blogs/6889056965376595624/posts?key=AIzaSyBWVDC6NHZX7P6GRtdPrUWpECEixmAX6NQ")!
+        
+        let session = NSURLSession.sharedSession()
+        
+        let task = session.dataTaskWithURL(url) { (data, response, error) -> Void in
+         
+            if error != nil {
+                print(error)
+            } else {
+                if let data = data {
+                    //print(NSString(data: data, encoding: NSUTF8StringEncoding))
+                    
+                    do {
+                        let jsonResult = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+                        
+                        //print(jsonResult)
+                        
+                        if jsonResult.count > 0 {
+                            if let items = jsonResult["items"] as? NSArray {
+                                let request = NSFetchRequest(entityName: "BlogItems")
+                                request.returnsObjectsAsFaults = false
+                                do {
+                                    let results = try context.executeFetchRequest(request)
+                                    if results.count > 0 {
+                                        for result in results {
+                                            context.deleteObject(result as! NSManagedObject)
+                                            
+                                            do {
+                                                try context.save()
+                                                
+                                            } catch {
+                                                print("ERROR attempting to delete the current object!")
+                                            }
+                                        }
+                                    }
+                                } catch {
+                                    print("something went wrong clearing out the old data")
+                                }
+                                
+                                for item in items {
+                                
+                                    if let title = item["title"] as? String {
+                                        if let content = item["content"] as? String {
+                                        
+                                            print("title: \(title)")
+                                            print("content: \(content)")
+                                        
+                                        
+                                        }
+                                    }
+                                
+                                }
+                                
+                                //print(items)
+                            }
+                        }
+                        
+                    } catch {
+                        print("Some sort of json error happened")
+                    }
+                    
+                }
+            }
+            
+        }
+        
+        task.resume()
+        
+        
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
 
