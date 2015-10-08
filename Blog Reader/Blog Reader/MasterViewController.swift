@@ -38,25 +38,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         // Dispose of any resources that can be recreated.
     }
 
-    func insertNewObject(sender: AnyObject) {
-        let context = self.fetchedResultsController.managedObjectContext
-        let entity = self.fetchedResultsController.fetchRequest.entity!
-        let newManagedObject = NSEntityDescription.insertNewObjectForEntityForName(entity.name!, inManagedObjectContext: context)
-             
-        // If appropriate, configure the new managed object.
-        // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-        newManagedObject.setValue(NSDate(), forKey: "timeStamp")
-             
-        // Save the context.
-        do {
-            try context.save()
-        } catch {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            //print("Unresolved error \(error), \(error.userInfo)")
-            abort()
-        }
-    }
+
 
     // MARK: - Segues
 
@@ -112,7 +94,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
         let object = self.fetchedResultsController.objectAtIndexPath(indexPath)
-        cell.textLabel!.text = object.valueForKey("timeStamp")!.description
+        cell.textLabel!.text = object.valueForKey("title")!.description
     }
 
     // MARK: - Fetched results controller
@@ -124,14 +106,14 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         
         let fetchRequest = NSFetchRequest()
         // Edit the entity name as appropriate.
-        let entity = NSEntityDescription.entityForName("Event", inManagedObjectContext: self.managedObjectContext!)
+        let entity = NSEntityDescription.entityForName("BlogItems", inManagedObjectContext: self.managedObjectContext!)
         fetchRequest.entity = entity
         
         // Set the batch size to a suitable number.
         fetchRequest.fetchBatchSize = 20
         
         // Edit the sort key as appropriate.
-        let sortDescriptor = NSSortDescriptor(key: "timeStamp", ascending: false)
+        let sortDescriptor = NSSortDescriptor(key: "title", ascending: false)
         
         fetchRequest.sortDescriptors = [sortDescriptor]
         
@@ -195,6 +177,46 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
          self.tableView.reloadData()
      }
      */
+    
+    
+    
+    /*
+    +
+    BLOG STUFF
+    
+    https://www.googleapis.com/blogger/v3/blogs/byurl?url=http://bifftech.blogspot.com/&key=AIzaSyBWVDC6NHZX7P6GRtdPrUWpECEixmAX6NQ
+    
+    
+    
+    {
+    "kind": "blogger#blog",
+    "id": "6889056965376595624",
+    "name": "“We're lost, but we're making good time”",
+    "description": "One of many classic Yogi Berra quotes.",
+    "published": "2007-05-01T11:25:08-04:00",
+    "updated": "2015-09-17T02:53:51-04:00",
+    "url": "http://bifftech.blogspot.com/",
+    "selfLink": "https://www.googleapis.com/blogger/v3/blogs/6889056965376595624",
+    "posts": {
+    "totalItems": 34,
+    "selfLink": "https://www.googleapis.com/blogger/v3/blogs/6889056965376595624/posts"
+    },
+    "pages": {
+    "totalItems": 0,
+    "selfLink": "https://www.googleapis.com/blogger/v3/blogs/6889056965376595624/pages"
+    },
+    "locale": {
+    "language": "en",
+    "country": "US",
+    "variant": ""
+    }
+    }
+    */
+    
+    
+    
+    
+    
 
 }
 
