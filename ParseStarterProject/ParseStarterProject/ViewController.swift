@@ -7,11 +7,44 @@
 import UIKit
 import Parse
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        print("Image Selected")
+        // get rid of the UI Image Picker Controller
+        self.dismissViewControllerAnimated(true, completion: nil)
+        importedImage.image = image
+        
+    }
+    
+    
+    @IBAction func importImage(sender: AnyObject) {
+        
+        let image = UIImagePickerController()
+        image.delegate = self
+        // in real device use: UIImagePickerControllerSourceType.Camera
+        image.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        image.allowsEditing = false
+        
+        self.presentViewController(image, animated: true, completion: nil)
+    
+    }
+    
+    
+    @IBOutlet weak var importedImage: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        
+        
+        
+        
+        /*
         
         let operation = "UPDATE"
         
@@ -65,6 +98,8 @@ class ViewController: UIViewController {
                 }
             })
         }
+        
+        */
         
     }
 
