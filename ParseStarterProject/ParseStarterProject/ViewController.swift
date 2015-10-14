@@ -13,10 +13,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let testObject = PFObject(className: "TestObject")
-        testObject["foo"] = "bar"
-        testObject.saveInBackgroundWithBlock { (success, error) -> Void in
-            print("Object has been saved.")
+        
+        let product = PFObject(className: "Products")
+        product["name"] = "Pizza"
+        product["description"] = "Tasty Good Food"
+        product["price"] = 9.99
+        product.saveInBackgroundWithBlock { (success, error) -> Void in
+            if success == true {
+                print("Success saving product")
+            } else {
+                print("Failed saving product")
+                print(error)
+            }
         }
         
     }
