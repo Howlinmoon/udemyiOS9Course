@@ -9,6 +9,20 @@ import Parse
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var username: UITextField!
+    
+    @IBOutlet weak var password: UITextField!
+    
+    @IBAction func signUo(sender: AnyObject) {
+        
+    }
+    
+    @IBAction func logIn(sender: AnyObject) {
+    
+    }
+    
+    
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
 
     override func viewDidLoad() {
