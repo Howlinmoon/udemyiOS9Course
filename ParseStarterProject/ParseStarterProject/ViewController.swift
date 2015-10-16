@@ -16,6 +16,19 @@ class ViewController: UIViewController {
     
     @IBAction func signUo(sender: AnyObject) {
         
+        if username.text == "" || password.text == "" {
+            let alert = UIAlertController(title: "Error in Form", message: "Please enter a username and password", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
+                self.dismissViewControllerAnimated(true, completion: nil)
+                
+            })))
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+        } else {
+            print("username and password are non-null")
+        }
+        
     }
     
     @IBAction func logIn(sender: AnyObject) {
