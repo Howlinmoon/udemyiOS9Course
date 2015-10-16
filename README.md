@@ -1,8 +1,8 @@
 # udemyiOS9Course
 
 Left off here:
-https://www.udemy.com/the-complete-ios-9-developer-course/learn/#/lecture/3194760
+https://www.udemy.com/the-complete-ios-9-developer-course/learn/#/lecture/3194766
 
-At the 34:00 mark
+Bug when login is successful
 
 
