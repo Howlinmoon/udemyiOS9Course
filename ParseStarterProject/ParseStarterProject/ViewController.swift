@@ -104,7 +104,7 @@ class ViewController: UIViewController {
                   
                         print("Trying to login?")
                         
-                        if error != nil {
+                        if error == nil {
                             // Logged in
                             print("Logged In!")
                             self.activityIndicator.stopAnimating()
