@@ -13,9 +13,36 @@ class GameScene: SKScene {
     
     // create a flappy bird node
     var bird = SKSpriteNode()
+    
+    // a sprite node for the background
+    var bg = SKSpriteNode()
 
     
     override func didMoveToView(view: SKView) {
+
+        // Add the background
+        let bgTexture = SKTexture(imageNamed: "bg.png")
+        
+        // use SKAction to scroll the background
+        let movebg = SKAction.moveByX(-bgTexture.size().width, y: 0, duration: 9)
+        // need to setup a treadmill for the background image
+        let replacebg = SKAction.moveByX(bgTexture.size().width, y:0, duration:  0)
+        // combine these two actions (move and replace) as one action
+        let movebgForever = SKAction.repeatActionForever(SKAction.sequence([movebg, replacebg]))
+        
+        
+        // duplicate the background 3x
+        for var i: CGFloat = 0; i < 3; i++ {
+            bg = SKSpriteNode(texture: bgTexture)
+            bg.position = CGPoint(x:bgTexture.size().width/2 + (bgTexture.size().width * i), y:CGRectGetMidY(self.frame))
+            bg.size.height = self.frame.height;
+
+            // add the current background to the scene
+            bg.runAction(movebgForever)
+            self.addChild(bg)
+        }
+        
+
         
         // assign the image to the node
         let birdTexture = SKTexture(imageNamed: "flappy1.png")
@@ -34,8 +61,12 @@ class GameScene: SKScene {
         // add the animation to the bird sprite
         bird.runAction(makeBirdFlap)
         
-        // add it to the scene / screen
+        // add the bird to the scene / screen
         self.addChild(bird)
+        
+        
+
+
         
     }
     
