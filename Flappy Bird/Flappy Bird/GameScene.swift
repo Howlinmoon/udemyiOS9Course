@@ -55,6 +55,10 @@ class GameScene: SKScene {
         
         bird = SKSpriteNode(texture: birdTexture)
         
+        // Add gravity
+        bird.physicsBody = SKPhysicsBody(circleOfRadius: bird.texture!.size().height/2)
+        bird.physicsBody!.dynamic = true;
+        
         // give it a location
         bird.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame))
         
@@ -64,14 +68,27 @@ class GameScene: SKScene {
         // add the bird to the scene / screen
         self.addChild(bird)
         
+        // add invisible ground to the game - keep the bird from falling for infinity
+        let ground = SKNode()
+        ground.position = CGPointMake(0, 0)
+        // make our physics body 1 pixel high by the width of the screen
+        ground.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(self.frame.size.width, 1))
+        // make the ground defy gravity - otherwise, it also would fall away :-P
+        ground.physicsBody!.dynamic = false
         
+        self.addChild(ground)
 
 
         
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-       /* Called when a touch begins */
+        
+        // on each touch - we bump the bird up a little
+        // set velocity to zero..
+        bird.physicsBody!.velocity = CGVectorMake(0, 0)
+        bird.physicsBody!.applyImpulse(CGVectorMake(0, 50))
+        
         
     }
    
