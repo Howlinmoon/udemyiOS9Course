@@ -17,6 +17,9 @@ class GameScene: SKScene {
     // a sprite node for the background
     var bg = SKSpriteNode()
 
+    // add the pipes
+    var pipe1 = SKSpriteNode()
+    var pipe2 = SKSpriteNode()
     
     override func didMoveToView(view: SKView) {
 
@@ -36,6 +39,9 @@ class GameScene: SKScene {
             bg = SKSpriteNode(texture: bgTexture)
             bg.position = CGPoint(x:bgTexture.size().width/2 + (bgTexture.size().width * i), y:CGRectGetMidY(self.frame))
             bg.size.height = self.frame.height;
+            
+            // experimental flickering fix
+            bg.zPosition = -5
 
             // add the current background to the scene
             bg.runAction(movebgForever)
@@ -78,8 +84,24 @@ class GameScene: SKScene {
         
         self.addChild(ground)
 
-
+        // The height of the gap between our pipes
+        // set it initially 4x the height of the bird
+        let gapHeight = birdTexture.size().height * 4
+        print("The gapHeight is \(gapHeight)")
         
+        // Add the pipes
+        let pipe1Texture = SKTexture(imageNamed: "pipe1.png")
+        var pipe1 = SKSpriteNode(texture: pipe1Texture)
+        pipe1.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame) + pipe1Texture.size().height/2 + (gapHeight / 2) )
+        pipe1.zPosition = -4
+        self.addChild(pipe1)
+
+        let pipe2Texture = SKTexture(imageNamed: "pipe2.png")
+        var pipe2 = SKSpriteNode(texture: pipe2Texture)
+        pipe2.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame) - pipe2Texture.size().height/2 - (240 / 2) )
+        pipe2.zPosition = -4
+        self.addChild(pipe2)
+
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
