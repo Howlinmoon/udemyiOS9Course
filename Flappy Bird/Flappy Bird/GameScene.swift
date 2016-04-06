@@ -84,22 +84,46 @@ class GameScene: SKScene {
         
         self.addChild(ground)
 
+        
+        // add a timer to spawn new pipes
+        _ = NSTimer.scheduledTimerWithTimeInterval(3, target:self, selector: Selector("makePipes"), userInfo: nil, repeats: true)
+        
+
+    }
+    
+    func makePipes() {
         // The height of the gap between our pipes
         // set it initially 4x the height of the bird
-        let gapHeight = birdTexture.size().height * 4
+        let gapHeight = bird.size.height * 4
         print("The gapHeight is \(gapHeight)")
+        
+        // add some randomness to the pipe positions
+        let movementAmount = arc4random() % UInt32(self.frame.size.height / 2)
+        let pipeOffset = CGFloat(movementAmount) - self.frame.size.height / 4
+        
+        print("pipeOffset = \(pipeOffset)")
+        
+        // spawn and remove pipes as they scroll to the left
+        let movePipes = SKAction.moveByX(-self.frame.size.width * 2, y:0, duration: NSTimeInterval(self.frame.size.width / 100))
+        let removePipes = SKAction.removeFromParent()
+        let moveAndRemovePipes = SKAction.sequence([movePipes, removePipes])
+        
         
         // Add the pipes
         let pipe1Texture = SKTexture(imageNamed: "pipe1.png")
         var pipe1 = SKSpriteNode(texture: pipe1Texture)
-        pipe1.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame) + pipe1Texture.size().height/2 + (gapHeight / 2) )
+        // adjust X so it spawns off the right edge - and scrolls onto the screen
+        pipe1.position = CGPoint(x: CGRectGetMidX(self.frame) + self.frame.size.width, y: CGRectGetMidY(self.frame) + pipe1Texture.size().height/2 + (gapHeight / 2) + pipeOffset)
         pipe1.zPosition = -4
+        pipe1.runAction(moveAndRemovePipes)
         self.addChild(pipe1)
-
+        
         let pipe2Texture = SKTexture(imageNamed: "pipe2.png")
         var pipe2 = SKSpriteNode(texture: pipe2Texture)
-        pipe2.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame) - pipe2Texture.size().height/2 - (240 / 2) )
+        // adjust X so it spawns off the right edge - and scrolls onto the screen
+        pipe2.position = CGPoint(x: CGRectGetMidX(self.frame) + self.frame.size.width, y: CGRectGetMidY(self.frame) - pipe2Texture.size().height/2 - (240 / 2) + pipeOffset)
         pipe2.zPosition = -4
+        pipe2.runAction(moveAndRemovePipes)
         self.addChild(pipe2)
 
     }
