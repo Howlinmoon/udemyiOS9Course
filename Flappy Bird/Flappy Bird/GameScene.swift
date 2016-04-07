@@ -14,6 +14,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var score = 0
     var scoreLabel = SKLabelNode()
     
+    // show a countdown in the score label before starting...
+    var countDown = 50
+    
     // create a flappy bird node
     var bird = SKSpriteNode()
     
@@ -37,8 +40,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         case Gap = 4
     }
     
-    // game over flag
-    var gameOver = false
+    // game state
+    // possible states: intro, running, over
+    var gameState = "intro"
     // and a label for the message
     var gameOverLabel = SKLabelNode()
     
@@ -57,9 +61,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         // duplicate the background 3x
-        for var i: CGFloat = 0; i < 3; i++ {
+        for i in 0 ..< 3 {
             bg = SKSpriteNode(texture: bgTexture)
-            bg.position = CGPoint(x:bgTexture.size().width/2 + (bgTexture.size().width * i), y:CGRectGetMidY(self.frame))
+            bg.position = CGPoint(x:bgTexture.size().width/2 + (bgTexture.size().width * CGFloat(i) ), y:CGRectGetMidY(self.frame))
             bg.size.height = self.frame.height;
             
             // experimental flickering fix
@@ -154,13 +158,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // The height of the gap between our pipes
         // set it initially 4x the height of the bird
         let gapHeight = bird.size.height * 4
-        print("The gapHeight is \(gapHeight)")
         
         // add some randomness to the pipe positions
         let movementAmount = arc4random() % UInt32(self.frame.size.height / 2)
         let pipeOffset = CGFloat(movementAmount) - self.frame.size.height / 4
         
-        print("pipeOffset = \(pipeOffset)")
+        // print("pipeOffset = \(pipeOffset)")
         
         // spawn and remove pipes as they scroll to the left
         let movePipes = SKAction.moveByX(-self.frame.size.width * 2, y:0, duration: NSTimeInterval(self.frame.size.width / 100))
@@ -212,8 +215,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         movingObjects.addChild(pipe2)
         
         // Add the scoring window
-        var gap = SKNode()
-        gap.position = CGPoint(x:CGRectGetMidX(self.frame) + self.frame.size.width, y: CGRectGetMidY(self.frame) + pipeOffset)
+        let gap = SKNode()
+        // for placing the scoring window - uncomment the lines involving 'scoringBlock'
+        // let scoringBlock = SKSpriteNode(color: SKColor.blackColor(), size: CGSizeMake(pipe1.size.width, gapHeight))
+        // scoringBlock.runAction(moveAndRemovePipes)
+        
+        gap.position = CGPoint(x:CGRectGetMidX(self.frame) + self.frame.size.width + 100 + bird.size.width, y: CGRectGetMidY(self.frame) + pipeOffset)
+
         gap.runAction(moveAndRemovePipes)
         // give the scoring window a physics body, and make sure it defies gravity!
         gap.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(pipe1.size.width, gapHeight))
@@ -226,6 +234,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         gap.physicsBody!.collisionBitMask = ColliderType.Gap.rawValue
         // add it
         movingObjects.addChild(gap)
+        
+        // scoringBlock.position = CGPoint(x:CGRectGetMidX(self.frame) + self.frame.size.width + 100 + bird.size.width, y: CGRectGetMidY(self.frame) + pipeOffset)
+        //scoringBlock.zPosition = 9 // zPosition to change in which layer the barra appears.
+        
+        // scoringBlock.zPosition = -3
+        // movingObjects.addChild(scoringBlock)
 
     }
     
@@ -233,17 +247,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func didBeginContact(contact: SKPhysicsContact) {
         if contact.bodyA.categoryBitMask == ColliderType.Gap.rawValue || contact.bodyB.categoryBitMask == ColliderType.Gap.rawValue {
             score += 1
-            print("You have scored a point, score is now: \(score)")
+            // print("You have scored a point, score is now: \(score)")
             scoreLabel.text = "\(score)"
             
         } else {
             // contact made with something other than the gap - bad!
             
             // only display the label, if the game is not already over
-            if gameOver == false {
-                print("Contact has been made - YOU LOST!")
+            if gameState == "running" {
                 // stop the game
-                gameOver = true
+                gameState = "over"
                 self.speed = 0
                 gameOverLabel.text = "GAME OVER - YOU LOST!"
                 gameOverLabel.fontName = "Helvetica"
@@ -260,12 +273,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         // only allow user input if the game is not over
         
-        if !gameOver {
+        if gameState == "running" {
             // on each touch - we bump the bird up a little
             // set velocity to zero..
             bird.physicsBody!.velocity = CGVectorMake(0, 0)
             bird.physicsBody!.applyImpulse(CGVectorMake(0, 50))
-        } else {
+        } else if gameState == "over" {
             // this means the game is over, and someone touched the screen
             // so we start the game again
             score = 0
@@ -282,8 +295,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             // reset the game speed to normal
             self.speed = 1
             
-            // reset our game over flag
-            gameOver = false
+            // reset our game state back to the intro
+            countDown = 50
+            gameState = "intro"
             
             // remove the game over label
            labelContainer.removeAllChildren()
@@ -294,5 +308,32 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
    
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
+        //print("The current game state is: \(gameState)")
+        var introMessage = ""
+        
+        if gameState == "intro" {
+            // make the bird impervious to gravity
+            bird.physicsBody!.dynamic = false
+            // choose the message to show depending on the count
+            if countDown > 35 {
+                introMessage = "Get Ready!"
+            } else if countDown > 20 {
+                introMessage = "Get Set!"
+            } else if countDown > 5 {
+                introMessage = "Go!"
+            }
+
+            // decrement our countdown timer down to 0...
+            countDown -= 1
+            // times up?
+            if countDown == -1 {
+                gameState = "running"
+                bird.physicsBody!.dynamic = true
+                introMessage = "0"
+            }
+
+            scoreLabel.text = introMessage
+
+        }
     }
 }
