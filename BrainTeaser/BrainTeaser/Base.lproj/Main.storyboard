@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--LoginVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginVC" customModule="BrainTeaser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="15966-NQV4BG.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7eA-ZY-Rio">
+                                <rect key="frame" x="127" y="28" width="347" height="227"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="347" id="HyX-Lc-e10"/>
+                                    <constraint firstAttribute="height" constant="227" id="bPB-6q-zbU"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uf1-5g-pWM">
+                                <rect key="frame" x="184" y="293" width="233" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="233" id="1Dg-N4-m8g"/>
+                                    <constraint firstAttribute="height" constant="35" id="Tab-r8-HAs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rox-Zh-Ebf">
+                                <rect key="frame" x="184" y="349" width="233" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="233" id="1AR-jh-lag"/>
+                                    <constraint firstAttribute="height" constant="35" id="75A-QX-e2X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzZ-jn-Lqi">
+                                <rect key="frame" x="236" y="419" width="128" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="egt-0G-MTc"/>
+                                    <constraint firstAttribute="height" constant="49" id="yIg-Y7-j5J"/>
+                                </constraints>
+                                <state key="normal" title="Login"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fzZ-jn-Lqi" firstAttribute="centerX" secondItem="rox-Zh-Ebf" secondAttribute="centerX" id="03H-8f-dOh"/>
+                            <constraint firstItem="rox-Zh-Ebf" firstAttribute="top" secondItem="uf1-5g-pWM" secondAttribute="bottom" constant="21" id="8hM-Bb-7Fx"/>
+                            <constraint firstItem="7eA-ZY-Rio" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="LIf-QM-ugU"/>
+                            <constraint firstItem="fzZ-jn-Lqi" firstAttribute="top" secondItem="rox-Zh-Ebf" secondAttribute="bottom" constant="35" id="OQH-wi-g7q"/>
+                            <constraint firstItem="rox-Zh-Ebf" firstAttribute="centerX" secondItem="uf1-5g-pWM" secondAttribute="centerX" id="W5Q-eY-nI1"/>
+                            <constraint firstItem="uf1-5g-pWM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eHv-pr-XnX"/>
+                            <constraint firstItem="uf1-5g-pWM" firstAttribute="top" secondItem="7eA-ZY-Rio" secondAttribute="bottom" constant="38" id="eQy-HI-3Yh"/>
+                            <constraint firstItem="7eA-ZY-Rio" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fd4-Qn-Tvq"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="357"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="15966-NQV4BG.jpg" width="1667" height="1667"/>
+    </resources>
+</document>

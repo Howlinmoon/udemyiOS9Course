@@ -1,11 +1,10 @@
 # udemyiOS9Course
 
-Completed Flappy Bird
+Starting a new project, Brain Teaser
 
 Left off here:
+https://www.udemy.com/intermediate-ios/learn/v4/t/lecture/4655786
 
-
-Flappy Bird Clone
 
 
 
