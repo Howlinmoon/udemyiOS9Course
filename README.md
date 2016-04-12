@@ -1,9 +1,11 @@
 # udemyiOS9Course
 
-Starting a new project, Brain Teaser
+Starting a new project, 
 
 Left off here:
-https://www.udemy.com/intermediate-ios/learn/v4/t/lecture/4655786
+https://www.udemy.com/ios9-swift/learn/v4/t/lecture/3346912
+
+
 
 
 
