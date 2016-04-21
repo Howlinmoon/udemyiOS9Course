@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         updateTapsLabel()
         
         if isGameOver() {
-            
+            restartGame()
         }
         
     }
@@ -68,6 +68,15 @@ class ViewController: UIViewController {
         maxTaps = 0
         howManyTapsTxt.text = ""
         
+        logoImg.hidden = false
+        playBtn.hidden = false
+        howManyTapsTxt.hidden = false
+
+        tapBtn.hidden = true
+        tapsLabel.hidden = true
+        
     }
+    
+    
 }
 
